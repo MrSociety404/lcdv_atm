@@ -1,6 +1,10 @@
 Config = {}
+Message = {}
 
-Config.OpenNotification = 'Appuyez sur ~INPUT_PICKUP~ pour déposer ou retirer du ~g~cash~s~.'
+Message.Action = 'Appuyez sur ~INPUT_PICKUP~ pour déposer ou retirer du ~g~cash~s~.'
+Message.InvalidAmount = 'Montant ~r~invalide~s~'
+Message.DepositMoney = 'Vous avez déposé de l\'argent dans votre ~g~compte bancaire~s~.'
+Message.WithdrawMoney = 'Vous avez retiré de l\'argent de votre ~g~compte bancaire~s~.'
 
 Config.ATMLocations = {
 	{ ['x'] = -386.733,  ['y'] = 6045.953,  ['z'] = 31.501},

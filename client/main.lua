@@ -47,7 +47,7 @@ CreateThread(function()
   while true do
     
     local sleep = 1500
-    local pedCoords = GetEntityCoords(GetPlayerPed())
+    local pedCoords = GetEntityCoords(PlayerPedId())
 
     for index, location in pairs(Config.ATMLocations) do
       
@@ -55,7 +55,7 @@ CreateThread(function()
       
       if(distance < 3 and not atmIsShowed) then
         sleep = 0
-        ESX.ShowHelpNotification(Config.OpenNotification)
+        ESX.ShowHelpNotification(Message.Action)
         if(IsControlJustReleased(0, 38)) then
           TriggerEvent('lcdv_atm:openATM')
         end

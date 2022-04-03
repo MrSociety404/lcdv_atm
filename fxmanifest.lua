@@ -8,6 +8,7 @@ version '1.0'
 shared_script '@es_extended/imports.lua'
 
 server_scripts {
+  'config.lua',
   'server/main.lua'
 }
 

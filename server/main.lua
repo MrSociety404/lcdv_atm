@@ -8,11 +8,11 @@ AddEventHandler('lcdv_atm:deposit', function(amount)
 	amount = ESX.Math.Round(amount)
 
 	if amount == nil or amount <= 0 or amount > xPlayer.getMoney() then
-		xPlayer.showNotification(_U('invalid_amount'))
+		xPlayer.showNotification(Message.InvalidAmount)
 	else
 		xPlayer.removeMoney(amount)
 		xPlayer.addAccountMoney('bank', amount)
-		xPlayer.showNotification(_U('deposit_money', amount))
+		xPlayer.showNotification(Message.DepositMoney)
 	end
 end)
 
@@ -27,10 +27,10 @@ AddEventHandler('lcdv_atm:withdraw', function(amount)
 	amount = ESX.Math.Round(amount)
 
 	if amount == nil or amount <= 0 or amount > accountMoney then
-		xPlayer.showNotification(_U('invalid_amount'))
+		xPlayer.showNotification(Message.InvalidAmount)
 	else
 		xPlayer.removeAccountMoney('bank', amount)
 		xPlayer.addMoney(amount)
-		xPlayer.showNotification(_U('withdraw_money', amount))
+		xPlayer.showNotification(Message.WithdrawMoney)
 	end
 end)

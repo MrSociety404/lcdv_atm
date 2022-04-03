@@ -4,6 +4,7 @@ import mainFooter from "./components/mainFooter.vue";
 
 import { useStore } from "vuex";
 import { onMounted, ref } from "vue";
+import router from "./router";
 
 const atmIsOpen = ref(false);
 const store = useStore();
@@ -44,6 +45,7 @@ onMounted(() => {
       fetch("https://lcdv_atm/escape", {
         method: "POST",
       });
+      router.push({ name: "home" });
     }
   });
 });

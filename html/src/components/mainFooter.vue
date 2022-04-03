@@ -2,7 +2,7 @@
 
 <template lang="pug">
 footer.footer
-  p © La Cité du Vice | MrSociety404
+  p © La Cité du Vice
 </template>
 
 <style lang="scss">

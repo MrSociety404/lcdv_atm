@@ -1,0 +1,90 @@
+:root {
+  --backgroundColor: rgba(42, 42, 42, 1);
+  --textColor: rgba(255, 255, 255, 1);
+  --secondaryColor: rgba(222, 226, 230, 1);
+  --primaryColor: rgba(33, 144, 55, 1);
+  --lightColor: rgba(255, 255, 255, .1);
+  --dangerColor: rgba(220, 53, 69, 1);
+}
+
+:root.light {
+  --backgroundColor: rgba(255, 255, 255, 1);
+  --textColor: rgba(0, 0, 0, 1);
+  --secondaryColor: rgba(108, 117, 125, 1);
+  --primaryColor: rgba(33, 144, 55, 1);
+  --lightColor: rgba(0, 0, 0, .1);
+  --dangerColor: rgba(220, 53, 69, 1);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: Raleway;
+  src: url("../fonts/Raleway-VariableFont_wght.ttf");
+}
+
+/* RESET CSS  */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly. */
+:where([contenteditable]){
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  line-break: after-white-space;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+.atm__container {
+  background-image: url("../img/Background.png");
+}
+
+input:focus {
+  appearance: none !important;
+  -webkit-rtl-ordering: none;
+  writing-mode: unset;
+}
+
+input::placeholder {
+  color: var(--textColor);
+}
